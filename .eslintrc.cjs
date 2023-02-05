@@ -4,7 +4,7 @@ module.exports = {
     es2021: true,
     node: true
   },
-  extends: ['plugin:vue/vue3-essential', 'standard-with-typescript', 'plugin:prettier/recommended'],
+  extends: ['plugin:vue/vue3-essential', 'standard-with-typescript', 'plugin:prettier/recommended','./.eslintrc-auto-import.json'],
   overrides: [],
   parser:"vue-eslint-parser",
   parserOptions: {

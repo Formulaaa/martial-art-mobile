@@ -14,12 +14,28 @@ export default defineConfig({
       resolvers: [VantResolver()]
     }),
     AutoImport({
-      imports: ['vue', 'vue-router', 'pinia']
+      imports: ['vue', 'vue-router', 'pinia', '@vueuse/core'],
+      eslintrc: {
+        enabled: false, // Default `false`
+        filepath: './.eslintrc-auto-import.json', // Default `./.eslintrc-auto-import.json`
+        globalsPropValue: true // Default `true`, (true | false | 'readonly' | 'readable' | 'writable' | 'writeable')
+      }
     }),
     createStyleImportPlugin({
       resolves: [AndDesignVueResolve()]
     })
   ],
+  css: {
+    preprocessorOptions: {
+      scss: {
+        /**如果引入多个文件，可以使用
+       * '@import "@/assets/scss/globalVariable1.scss";
+       * @import"@/assets/scss/globalVariable2.scss";'
+      **/
+        additionalData: '@import "@/style/globalVar.scss";',
+      }
+    }
+  },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src')
