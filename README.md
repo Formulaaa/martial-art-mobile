@@ -1,18 +1,27 @@
-# Vue 3 + TypeScript + Vite
+# 项目模板 Vite+Vue3+TS 💯 
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## 生产依赖 :computer:
+1. vue-router: 提供路由管理功能
+2. pinia: 提供状态管理功能
+3. axios： 提供网络请求功能
+4. @vueuse/core: 响应式库，万物皆响应
 
-## Recommended IDE Setup
+## 开发依赖 📦
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+1. unplugin-auto-import: 自动引入库中的函数：如vue中的ref等...
+2. unplugin-vue-components: ui库按需引入
+3. vite-plugin-style-import: 样式自动引入：如antd中的message样式需要单独引入
+4. sass：scss预编译
 
-## Type Support For `.vue` Imports in TS
+## 代码规范 :bookmark_tabs:
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+1. .editorconfig: 编辑器配置文件
+2. prettier: 统一代码格式
+3. eslint: 检查ts语法错误等
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+## git规范
 
-1. Disable the built-in TypeScript Extension
-   1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-   2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+1. husky: git钩子
+2. lint-staged: 提交前进行代码格式检查
+3. commitizen：规范化git message
+4. cz-normalizable: 自定义git message格式信息

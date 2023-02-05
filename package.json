@@ -2,19 +2,18 @@
   "name": "martial-art-mobile",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
     "dev": "vite --host",
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
     "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx --fix",
     "prepare": "husky install",
-    "commit:comment": "引导设置规范化的提交信息",
     "commit": "git-cz"
   },
   "config": {
     "commitizen": {
-      "path": "node_modules/cz-conventional-changelog"
+      "path": "node_modules/cz-customizable"
     }
   },
   "lint-staged": {
