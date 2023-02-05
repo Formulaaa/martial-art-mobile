@@ -3,7 +3,7 @@ import vue from '@vitejs/plugin-vue'
 import Components from 'unplugin-vue-components/vite'
 import { VantResolver } from 'unplugin-vue-components/resolvers'
 import AutoImport from 'unplugin-auto-import/vite'
-import { createStyleImportPlugin, AndDesignVueResolve } from 'vite-plugin-style-import'
+import { createStyleImportPlugin } from 'vite-plugin-style-import'
 import path from 'path'
 
 // https://vitejs.dev/config/
@@ -22,7 +22,7 @@ export default defineConfig({
       }
     }),
     createStyleImportPlugin({
-      resolves: [AndDesignVueResolve()]
+      resolves: []
     })
   ],
   css: {
