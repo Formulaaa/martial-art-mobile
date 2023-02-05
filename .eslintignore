@@ -6,3 +6,5 @@
 .DS_Store
 vite.config.ts
 .eslintrc.cjs
+components.d.ts
+auto-imports.d.ts
