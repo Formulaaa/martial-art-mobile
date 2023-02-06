@@ -11,7 +11,7 @@
     </a>
   </div>
 
-  <HelloWorld msg="Vite + Vue" />
+  <RouterView />
 </template>
 
 <style scoped>
